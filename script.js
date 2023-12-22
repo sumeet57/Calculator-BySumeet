@@ -27,8 +27,9 @@ var buttons = document.querySelectorAll(".buttons");
     newp="";
     newp1="";
     var up = out.slice(0, -1);
+    var up1 = temp.slice(0, -1);
     out = up;
-    temp = up
+    temp = up1;
     outdis.textContent = temp;
   }
   if(newp==='x'){
