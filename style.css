@@ -1,0 +1,171 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    scroll-behavior: smooth;
+}
+:root{
+    --maincl:#111;
+    --pri:#333;
+    --sec:#777;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--sec);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--pri);
+    height: 8px;
+    border-radius: 10rem;
+  }
+
+
+.main{
+    background-color: var(--maincl);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.panel{
+    transform: translate(0, -10%);
+    width: 20rem;
+    height: 31rem;
+    border-radius: .5rem;
+    background-color: var(--pri);
+    overflow: hidden;
+}
+.toppanel{
+    width: 100%;
+    position: relative;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.toppanel .clean{
+    position: absolute;
+    right: 0;
+    width: 0%;
+    /* transform-origin: left; */
+    height: 100px;
+    background-color: var(--sec);
+    transition: cubic-bezier(0.19, 1, 0.22, 1) .5s;
+}
+.toppanel #inout{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    text-decoration: none;
+    font-weight: 600;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) .5s all;
+    text-align: right;
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 3rem;
+    padding: 0.5rem 1.5rem;
+    padding-top: 1rem;
+    background-color: azure;
+}
+
+.panel .bodypanel button{
+    cursor: pointer;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    border-radius: 50%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+.panel .bodypanel button:active{
+    scale:0.9;
+}
+.panel .bodypanel{
+    padding: 3vh 1vw;
+    display: flex;
+}
+.panel .bodypanel .leftdiv{
+    gap: 8px;
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.panel .bodypanel .rightdiv{
+    gap: 8px;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.panel .bodypanel .rightdiv button{
+    background-color: rgb(255, 236, 202);
+}
+#extra{
+    background-color: rgb(255, 166, 0);
+    width: 8.2rem;
+    border-radius: 2rem;
+    font-size: 3rem;
+}
+#caa{
+    background-color: rgb(255, 236, 202);
+}
+#caa:hover{
+    background-color: orange;
+}
+.buttons:hover{
+    background-color: var(--sec);
+    color: #fff;
+}
+.panel .bodypanel .rightdiv button:hover{
+    background-color: orange;
+
+}
+#extra:hover{
+    background-color: orange;
+    color: #fff;
+}
+@media (width<340px) {
+    .panel{
+        width: 15rem;
+        height: 24rem;
+    }
+    .toppanel{
+        height: 75px;
+    }
+    .toppanel #inout{
+        font-size: 2.2rem;
+        padding-top: 0.8rem;
+    }
+    .panel .bodypanel button{
+        width: 3rem;
+        height: 3rem;
+    }
+    #extra{
+        width:6.5rem;
+        font-size: 2.5rem;
+    }
+    
+    .toppanel .clean{
+        height: 75px;
+    }
+}
